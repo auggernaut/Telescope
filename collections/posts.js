@@ -35,7 +35,13 @@ Meteor.methods({
         numberOfPostsInPast24Hours=numberOfItemsInPast24Hours(user, Posts),
         postInterval = Math.abs(parseInt(getSetting('postInterval', 30))),
         maxPostsPer24Hours = Math.abs(parseInt(getSetting('maxPostsPerDay', 30))),
-        postId = '';
+        postId = '',
+        image1 = post.image1,
+        caption1 = post.caption1,
+        image2 = post.image2,
+        caption2 = post.caption2,
+        image3 = post.image3
+        caption3 = post.caption3;
 
     // only let admins post as another user
     if(isAdmin(Meteor.user()))
@@ -50,10 +56,10 @@ Meteor.methods({
       throw new Meteor.Error(602, i18n.t('Please fill in a headline'));
 
     // check that there are no previous posts with the same link
-    if(post.url && (typeof postWithSameLink !== 'undefined')){
-      Meteor.call('upvotePost', postWithSameLink);
-      throw new Meteor.Error(603, i18n.t('This link has already been posted', postWithSameLink._id));
-    }
+    //if(post.url && (typeof postWithSameLink !== 'undefined')){
+    //  Meteor.call('upvotePost', postWithSameLink);
+    //  throw new Meteor.Error(603, i18n.t('This link has already been posted', postWithSameLink._id));
+    //}
 
     if(!isAdmin(Meteor.user())){
       // check that user waits more than X seconds between posts

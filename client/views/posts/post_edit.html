@@ -6,24 +6,58 @@
           <label class="control-label post-form-headline">{{i18n "Created"}}</label>
           <div class="controls"><p>{{created}}</p></div>
         </div>
-        <div class="control-group">
-          <label class="control-label post-form-headline">{{i18n "Title"}}</label>
-          <div class="controls"><input id="title" type="text" value="{{headline}}" /></div>
-        </div>
-        <div class="control-group">
-          <label class="control-label post-form-url">{{i18n "URL"}}</label>
-          <div class="controls"><input id="url" type="text" value="{{url}}" /></div>
-        </div>
+
+          <div class="control-group">
+              <label class="control-label">{{i18n "Question"}}</label>
+              <div class="controls"><input id="title" type="text" value="{{headline}}" /></div>
+              <!--<a href="#" class="get-title-link inline-link">{{i18n "Suggest title"}}</a>-->
+          </div>
+
+          <div class="control-group">
+              <label class="control-label">{{i18n "Image 1"}}</label>
+              <div class="controls"><input id="image1" type="text" value="{{image1}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Caption 1"}}</label>
+              <div class="controls"><input id="caption1" type="text" value="{{caption1}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Image 2"}}</label>
+              <div class="controls"><input id="image2" type="text" value="{{image2}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Caption 2"}}</label>
+              <div class="controls"><input id="caption2" type="text" value="{{caption2}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Image 3"}}</label>
+              <div class="controls"><input id="image3" type="text" value="{{image3}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Caption 3"}}</label>
+              <div class="controls"><input id="caption3" type="text" value="{{caption3}}"/></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Notes"}}</label>
+              <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge">{{body}}</textarea></div>
+          </div>
+          <div class="control-group">
+              <label class="control-label">{{i18n "Source URL"}}</label>
+              <div class="controls"><input id="url" type="text" value="{{url}}" /></div>
+          </div>
+
+        <!--<div class="control-group">-->
+          <!--<label class="control-label post-form-headline">{{i18n "Title"}}</label>-->
+
+        <!--</div>-->
+
         {{#if shorten}}
         <div class="control-group">
           <label class="control-label post-form-url">{{i18n "Short URL"}}</label>
           <div class="controls"><input id="short-url" type="text" value="{{shortUrl}}" /></div>
         </div>
         {{/if}}
-        <div class="control-group">
-          <label class="control-label post-form-body">{{i18n "Body"}}</label>
-          <div class="controls" id="editor"><textarea id="body" value="" class="input-xlarge">{{body}}</textarea></div>
-        </div>
+
         {{#if categoriesEnabled}}
         <div class="control-group post-form-category">
           <label class="control-label">{{i18n "Categories"}}</label>

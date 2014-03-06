@@ -81,6 +81,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 32, ../sass/partials/_mixins.scss */
 .grid-block, .post-content, .post-actions li a, .post-message, .comment-content, .comment-new, .error {
+  clear:both;
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2050,3 +2051,31 @@ table {
         /* line 222, ../sass/partials/_mobile.scss */
         .post .post-actions li a .action {
           display: none; } }
+
+.imgBox {
+    float:left;
+    width: 31%;
+    padding-right: 10px;
+}
+
+.imgBox img{
+    max-width: 100%;
+}
+
+.post-images {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.post {
+    margin-top: 20px;
+
+}
+
+.comment-new {
+    clear:both;
+}
+
+.scap {
+    width: 100%;
+}

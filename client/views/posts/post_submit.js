@@ -49,6 +49,12 @@ Template.post_submit.events({
     var submitted = $('#submitted_hidden').val();
     var userId = $('#postUser').val();
     var status = parseInt($('input[name=status]:checked').val());
+    var image1 = $('#image1').val();
+    var image2 = $('#image2').val();
+    var image3 = $('#image3').val();
+      var caption1 = $('#caption1').val();
+      var caption2 = $('#caption2').val();
+      var caption3 = $('#caption3').val();
 
     $('input[name=category]:checked').each(function() {
       categories.push(Categories.findOne($(this).val()));
@@ -63,6 +69,12 @@ Template.post_submit.events({
       , submitted: submitted
       , userId: userId
       , status: status
+      , image1: image1
+      , caption1: caption1
+      , caption2: caption2
+      , caption3: caption3
+      , image2: image2
+      , image3: image3
     };
     if(url){
       var cleanUrl = (url.substring(0, 7) == "http://" || url.substring(0, 8) == "https://") ? url : "http://"+url;
