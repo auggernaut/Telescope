@@ -81,7 +81,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 32, ../sass/partials/_mixins.scss */
 .grid-block, .post-content, .post-actions li a, .post-message, .comment-content, .comment-new, .error {
-  clear:both;
   background: #fff;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -2078,4 +2077,8 @@ table {
 
 .scap {
     width: 100%;
+}
+
+.post-message {
+    clear:both;
 }

@@ -6,13 +6,13 @@ serveJSON = function() {
       site_url: Meteor.absoluteUrl()
   };
 
-    results.items = [];
+    results.sets = [];
 
     Posts.find({status: STATUS_APPROVED}, {sort: {submitted: -1}, limit: 200}).forEach(function(post) {
 
-        results.items.push( {
+        results.sets.push( {
             title: post.headline,
-            description: post.body+'</br></br> <a href="'+getPostUrl(post._id)+'">Comments</a>',
+            description: post.body,
             author: post.author,
             date: post.submitted,
             url: (post.url ? getOutgoingUrl(post.url) : getPostUrl(post._id)),
