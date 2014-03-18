@@ -8,7 +8,8 @@ Template.post_item.helpers({
     return this.post || this;
   },
   postLink: function(){
-    return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
+    //return !!this.url ? getOutgoingUrl(this.url) : "/posts/"+this._id;
+    return "/posts/"+this._id;
   },
   postTarget: function() {
     return !!this.url ? '_blank' : '';
