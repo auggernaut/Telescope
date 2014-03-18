@@ -12,7 +12,8 @@ Template.post_item.helpers({
     return "/posts/"+this._id;
   },
   postTarget: function() {
-    return !!this.url ? '_blank' : '';
+    //return !!this.url ? '_blank' : '';
+    return '';
   },
   oneBasedRank: function(){
     if(typeof this.rank != 'undefined')
