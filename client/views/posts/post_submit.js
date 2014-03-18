@@ -52,13 +52,13 @@ Template.post_submit.events({
         var image1 = $('#image1').val();
         var image2 = $('#image2').val();
         var image3 = $('#image3').val();
-        var image3 = $('#image4').val();
-        var image3 = $('#image5').val();
+        var image4 = $('#image4').val();
+        var image5 = $('#image5').val();
         var caption1 = $('#caption1').val();
         var caption2 = $('#caption2').val();
         var caption3 = $('#caption3').val();
-        var caption3 = $('#caption4').val();
-        var caption3 = $('#caption5').val();
+        var caption4 = $('#caption4').val();
+        var caption5 = $('#caption5').val();
 
         $('input[name=category]:checked').each(function () {
             categories.push(Categories.findOne($(this).val()));
