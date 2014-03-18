@@ -93,6 +93,17 @@ var recalculatePosition = function ($object, pArray) {
   }
 }
 
+$('.imgBox').hover(
+    function(){
+        current_h = $(this, 'img')[0].height;
+        current_w = $(this, 'img')[0].width;
+        $(this).stop(true, false).animate({width: (current_w * 1.3), height: (current_h * 1.3)}, 300);
+    },
+    function(){
+        $(this).stop(true, false).animate({width: current_w + 'px', height: current_h + 'px'}, 300);
+    }
+);
+
 Template.post_item.rendered = function(){
   var instance = this,
       $instance = $(instance.firstNode.nextSibling),
@@ -108,6 +119,8 @@ Template.post_item.rendered = function(){
   // if this is *not* the first render, recalculate positions
   if(instance.pArray.length>1)
     recalculatePosition($instance, instance.pArray);
+
+
 
 };
 

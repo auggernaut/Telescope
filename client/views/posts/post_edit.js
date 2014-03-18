@@ -85,9 +85,13 @@ Template.post_edit.events({
         var image1 = $('#image1').val();
         var image2 = $('#image2').val();
         var image3 = $('#image3').val();
+        var image4 = $('#image4').val();
+        var image5 = $('#image5').val();
         var caption1 = $('#caption1').val();
         var caption2 = $('#caption2').val();
         var caption3 = $('#caption3').val();
+        var caption4 = $('#caption4').val();
+        var caption5 = $('#caption5').val();
 
         e.preventDefault();
         if (!Meteor.user()) {
@@ -107,11 +111,15 @@ Template.post_edit.events({
             body: instance.editor.exportFile(),
             categories: categories,
             image1: image1,
-            caption1: caption1,
             image2: image2,
-            caption2: caption2,
             image3: image3,
-            caption3: caption3
+            image4: image4,
+            image5: image5,
+            caption1: caption1,
+            caption2: caption2,
+            caption3: caption3,
+            caption4: caption4,
+            caption5: caption5
         };
 
         if (url) {
