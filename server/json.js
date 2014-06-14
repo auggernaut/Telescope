@@ -22,7 +22,11 @@ serveJSON = function() {
             image2: post.image2,
             caption2: post.caption2,
             image3: post.image3,
-            caption3: post.caption3
+            caption3: post.caption3,
+            image4: post.image4,
+            caption4: post.caption4,
+            image5: post.image5,
+            caption5: post.caption5
         });
 
     });
