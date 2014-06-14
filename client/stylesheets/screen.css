@@ -2065,6 +2065,7 @@ table {
 }
 
 .resize{
+    background-color: #fff;
     max-width: 100%;
     z-index: -1;
     -webkit-transition: all .2s ease-in-out;
