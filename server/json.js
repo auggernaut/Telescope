@@ -26,7 +26,8 @@ serveJSON = function() {
             image4: post.image4,
             caption4: post.caption4,
             image5: post.image5,
-            caption5: post.caption5
+            caption5: post.caption5,
+            categories: post.categories
         });
 
     });
